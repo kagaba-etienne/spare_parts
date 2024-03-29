@@ -4,7 +4,9 @@ from .api import api_router
 
 origins = ["*"]
 
-app = FastAPI()
+app = FastAPI(
+    root_path="/parts"
+)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
